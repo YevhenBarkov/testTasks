@@ -1,0 +1,12 @@
+<ul>
+    {% if user %}
+            <li>{{ user.realName }}</li>
+            <li>{{ user.email }}</li>
+            <li><a href='logout'>logout</a></li>
+
+    {% else %}
+            <li><a href='log'>login</a><br/></li>
+            <li><a href='reg'>register</a><br/></li>
+    {% endif %}
+        <li><a href='home'>home</a><br/></li>
+</ul>

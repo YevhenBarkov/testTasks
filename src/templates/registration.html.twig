@@ -1,0 +1,44 @@
+{% include 'base.html.twig' %}
+<div>
+    <form action="/index.php/registration" method="post">
+        <div>
+            <label for="login">login</label>
+            <input type="text" id="login" name="_login" value="{{ user.login }}" required="required"/>
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="_email" value="{{ user.email }}"  required="required"/>
+        </div>
+        <div>
+            <label for="real_name">real name</label>
+            <input type="text" id="real_name" name="_real_name"  value="{{ user.realName }}" required="required"/>
+        </div>
+        <div>
+            <label for="birth_date">birth day</label>
+            <input type="date" id="birth_date" name="_birth_date" value="{{ user.birthDate }}" required="required"/>
+        </div>
+        <div>
+            <label for="country">Country</label>
+            <select id="country" name="_country" required="required" >
+                {% for country in countries %}
+                    <option value="{{ country.id }}">{{ country.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div>
+            <label for="password">password</label>
+            <input type="password" id="password" name="_password"  required="required"/>
+        </div>
+        <div>
+            <input type="checkbox" id="checked" name="_checked" value="1" required="required">
+            <label for="checked"> I`m agree</label>
+        </div>
+        <input type="submit" value="submit"/>
+    </form>
+    <div>
+        {% for error in errors %}
+            {{ error }} <br>
+        {% endfor %}
+    </div>
+</div>

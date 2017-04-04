@@ -1,0 +1,25 @@
+log:
+    path:     /log
+    defaults: { _controller: 'MyController' }
+
+reg:
+    path:     /reg
+    defaults: { _controller: 'MyController' }
+
+logout:
+    path:     /logout
+    defaults: { _controller: 'MyController' }
+
+login:
+    path:     /login
+    defaults: { _controller: 'MyController' }
+
+registration:
+    path:     /registration
+    defaults: { _controller: 'MyController' }
+
+home:
+    path:     /home
+    defaults: { _controller: 'MyController' }
+
+

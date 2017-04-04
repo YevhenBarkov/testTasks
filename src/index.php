@@ -26,6 +26,3 @@ if (!is_null($parameters)) {
         $controller->$action();
     }
 }
-
-//$tmp = new MyController();
-//$tmp->checkAction();

@@ -55,9 +55,11 @@ class MyController
                 header("Location: home");
 
             } else {
+
                 echo $this->twig->render('login.html.twig', array('error' =>'Wrong password'));
             }
         } else {
+
             echo $this->twig->render('login.html.twig', array('error' =>'No users with this login'));
         }
     }
